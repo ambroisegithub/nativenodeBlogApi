@@ -32,7 +32,7 @@ const options = {
     ],
     servers: [
       {
-        url: "",
+        url: "https://nativeblognodeapi.onrender.com",
       },
     ],
   },
@@ -52,8 +52,8 @@ mongoose
     console.log(err);
   });
 
-const PORT = process.env.PORT || 4446;
-app.listen(PORT || 4446, () => {
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
   console.log(`The server is running on port ${PORT}`);
 });
 app.use("*", (req, res) => {
