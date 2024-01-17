@@ -34,7 +34,7 @@ var options = {
       bearerAuth: []
     }],
     servers: [{
-      url: "https://blogapi12.onrender.com"
+      url: "https://nativeblognodeapi.onrender.com"
     }]
   },
   apis: ["./src/routes/*.js", "./src/modules/*.js"]
@@ -47,11 +47,11 @@ _mongoose["default"].connect(process.env.DATABASE).then(function () {
 })["catch"](function (err) {
   console.log(err);
 });
-var PORT = process.env.PORT || 4444;
-_app["default"].listen(PORT || 4444, function () {
+var PORT = process.env.PORT;
+_app["default"].listen(PORT, function () {
   console.log("The server is running on port ".concat(PORT));
 });
-_app["default"].use('*', function (req, res) {
+_app["default"].use("*", function (req, res) {
   res.status(404).json({
     status: "fail",
     data: "Not Found"

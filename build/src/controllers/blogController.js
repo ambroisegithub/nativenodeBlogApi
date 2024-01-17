@@ -72,11 +72,12 @@ var CreatePost = exports.CreatePost = /*#__PURE__*/function () {
         case 10:
           _context2.prev = 10;
           _context2.t0 = _context2["catch"](0);
+          console.error(_context2.t0); // Log the error for debugging purposes
           return _context2.abrupt("return", res.status(400).json({
             status: "failed",
             error: _context2.t0.message
           }));
-        case 13:
+        case 14:
         case "end":
           return _context2.stop();
       }

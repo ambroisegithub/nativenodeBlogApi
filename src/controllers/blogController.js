@@ -41,7 +41,7 @@ export const CreatePost = async (req, res) => {
       });
     }
   };
-export const updatePost = async (req, res) => {
+export const updatePost =  async (req, res) => {
   try {
     const id = req.params.id;
     const result = await UploadToCloud(req.file, res);
@@ -70,7 +70,6 @@ export const updatePost = async (req, res) => {
     });
   }
 };
-
 export const getSinglePost = async (req, res) => {
   try {
     const id = req.params.id;
